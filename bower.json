@@ -1,0 +1,19 @@
+{
+  "name": "tutorial",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Michael <lssslhs@gmail.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

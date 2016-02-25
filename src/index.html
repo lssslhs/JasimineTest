@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<style type="text/css">
+	.container { max-width: 900px; }
+	</style>
+	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+	<script type="text/javascript" src="src/movie-app/search.controller.js"></script>
+	<script type="text/javascript" src="src/movie-core/service.js"></script>
+	<script type="text/javascript" src="src/omdb/service.js"></script>
+</head>
+<body ng-app="movieApp">
+
+	<div class="header">
+		<div class="container">
+			<div class="page-header">
+				<h1>
+					<a href="#/">MovieApp</a> 
+				</h1>
+				<p class="lead">Your resource for Movie Data.</p>
+				<div ng-controller="SearchCtrl">
+					<form class="form-inline-lg" ng-submit="search()">
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Film title.." ng-model="query">
+							<span class="input-group-btn">
+								<button type="button" class="btn btn-default" ng-click="search()">GO!</button>
+							</span>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div ng-view></div>
+	</div>
+
+	<div class="footer">
+		<div class="container">
+			<p>from @bradoncode | movie data from http://www.ombdapi.com</p>
+		</div>
+	</div>
+</body>
+</html>
